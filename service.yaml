@@ -6,9 +6,9 @@ metadata:
   name: webapp
 spec:
   ports:
-  - port: 80
+  - nodePort: 31000
+    port: 80
     protocol: TCP
     targetPort: 80
-    nodePort: 31000
   selector:
-    app: webapp
+  sessionAffinity: None
